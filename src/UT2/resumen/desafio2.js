@@ -58,5 +58,10 @@ console.log(`Rango de movimiento: ${rangoMovimiento}`);
 const fila = 8;
 let peonBlanco = true;
 
-const figuraPromocionada =
-  (peonBlanco && fila === 8) ? "♕" : (!peonBlanco && fila === 1) ? "" : "";
+const figuraPromocionada = peonBlanco
+  ? fila === 8
+    ? '♕'
+    : 'peon'
+  : fila === 1
+    ? 'reina negra'
+    : 'peon';
