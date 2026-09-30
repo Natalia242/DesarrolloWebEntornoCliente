@@ -95,8 +95,16 @@ const fila = 8;
 let peonBlanco = true;
 
 /**
- * Figura que se muestra para el peón segun su color
+ * Figura que se muestra para el peón segun su color y su fila.
+ * Se usa un operador ternario anidado:
+ * - Peon blanco: en la fila 8 promociona a dama y en otro caso sigue siendo peon
+ * - Peon negro: en la fila 1 promociona a dama y en otro caso sigue siendo peon
+ *
+ * @const
  * @type {string}
+ * @example
+ * //Peon blanco en fila 8: devuelve dama.
+ * //Peon negro en fila 3: devuelve peon.
  */
 const figuraPromocionada = peonBlanco
   ? fila === 8
