@@ -24,7 +24,7 @@ if (!reyMovido && !torreMovida && !enJaque) {
   enroqueLegal = false;
 }
 
-console.log(`El enroque ${(enroqueLegal) ? "es" : "no es"} legal.`);
+console.log(`El enroque ${enroqueLegal ? 'es' : 'no es'} legal.`);
 
 //2
 const pieza = prompt('Introduce una pieza: ');
@@ -61,7 +61,9 @@ let peonBlanco = true;
 const figuraPromocionada = peonBlanco
   ? fila === 8
     ? '♕'
-    : 'peon'
+    : '♙'
   : fila === 1
-    ? 'reina negra'
-    : 'peon';
+    ? '♛'
+    : '♟';
+
+console.log(`Figura promocionada: ${figuraPromocionada}`);
