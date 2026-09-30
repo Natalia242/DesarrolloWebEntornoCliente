@@ -18,6 +18,7 @@ let reyMovido = false,
   enJaque = false;
 let enroqueLegal;
 
+// Se puede simplificar: enroqueLegal = !reyMovido && !torreMovida && !enJaque;
 if (!reyMovido && !torreMovida && !enJaque) {
   enroqueLegal = true;
 } else {
