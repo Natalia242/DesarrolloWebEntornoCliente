@@ -28,7 +28,7 @@ if (!reyMovido && !torreMovida && !enJaque) {
 console.log(`El enroque ${enroqueLegal ? 'es' : 'no es'} legal.`);
 
 //2
-const pieza = prompt('Introduce una pieza: ');
+const pieza = 'dama';
 let rangoMovimiento;
 
 switch (pieza) {
