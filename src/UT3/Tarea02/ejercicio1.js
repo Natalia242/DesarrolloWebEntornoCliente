@@ -1,15 +1,16 @@
 /*Desarrolla la función crearRelojAjedrezBlitz(tiempoInicialSeg, incrementoSeg, callbackActualizar, callbackFin).
+
 • Sincronización de Tiempo Real (Date.now()): Al iniciar el turno, registra la marca de tiempo de inicio tInicio = Date.now().
 • Ticker Asíncrono (setInterval): Configura un temporizador con intervalo de 100ms que calcule en cada pulso el tiempo
-consumido real tConsumido = Math.floor((Date.now() - tInicio) / 1000) y determine los segundos restantes segRestantes =
-tiempoInicialSeg - tConsumido.
+  consumido real tConsumido = Math.floor((Date.now() - tInicio) / 1000) y determine los segundos restantes segRestantes =
+  tiempoInicialSeg - tConsumido.
 • Formateo Digital (Date / padStart): Formatea los segundos restantes a la cadena digital 'MM:SS' asegurando 2 dígitos en
-minutos y segundos mediante String().padStart(2, '0').
+  minutos y segundos mediante String().padStart(2, '0').
 • Finalización (clearInterval): Si segRestantes <= 0, detén inmediatamente el reloj con clearInterval() e invoca
-callbackFin('¡Caída de Bandera!').
+  callbackFin('¡Caída de Bandera!').
 • Función de Cierre de Turno: La función debe retornar un objeto con el metodo detenerYSumarIncremento() que detenga
-el intervalo activo, sume el incrementoSeg al tiempo restante y devuelva la nueva marca de tiempo formateada con new
-Date().toLocaleTimeString('es-ES').
+  el intervalo activo, sume el incrementoSeg al tiempo restante y devuelva la nueva marca de tiempo formateada con new
+  Date().toLocaleTimeString('es-ES').
 */
 function crearRelojAjedrezBlitz(
   tiempoInicialSeg,
